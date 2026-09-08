@@ -1,0 +1,70 @@
+#T1
+print("Hello World!")
+#T2
+name = input("请输入你的名字: ")
+notes=int(input("请输入你已发的笔记数: "))
+tag=input("请输入你最喜欢的标签: ")
+print( name, "has", notes, "notes and follows", tag, ".")
+#T3
+while True:
+    try:
+        n = int(input("请输入总评论数: "))
+        if n < 0:
+            print("评论数不能为负，请重新输入。")
+            continue
+        break
+    except ValueError:
+        print("请输入一个整数。")
+
+nums = []
+for i in range(n):
+    while True:
+        try:
+            x = int(input(f"请输入第 {i+1} 个评论长度: "))
+            nums.append(x)
+            break
+        except ValueError:
+            print("请输入一个整数。")
+#调 print("输入的评论长度列表:", nums)
+cnt=0
+for i in nums:
+    if i>20:
+        cnt+=1
+print("评论长度超过20的评论数量:", cnt)
+#T4
+def calculateScore(likes,saves):
+    score = likes * 2 + saves * 3
+    return score
+l=int(input("请输入点赞数: "))
+s=int(input("请输入收藏数: "))
+score = calculateScore(l, s)
+print("计算互动分为:", score)
+#T5
+def CalculateScore(likes, saves,comments):
+    score = likes * 2 + saves * 3 + comments
+    return score
+while True:
+    try:
+        m=int(input("请输入笔记数："))
+        if m < 0:
+            print("笔记数不能为负，请重新输入。")
+            continue
+        break
+    except ValueError:
+        print("请输入一个整数。")
+nums=[]
+for i in range(m):
+    print("第", i+1, "篇笔记的数据")
+    likes=int(input("点赞数: "))
+    saves=int(input("收藏数: "))
+    comments=int(input("评论数: "))
+    score = CalculateScore(likes, saves, comments)
+    nums.append(score)
+nums.sort(reverse=True)  # 降序排序
+for i, score in enumerate(nums, start=1):
+    print(f"第 {i} 名: {score}分")
+
+    
+#T6
+
+    
