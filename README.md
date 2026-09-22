@@ -55,6 +55,7 @@ video.like()
 #T5
 def RC(nums,target):
 	seen = {}
+	#依然ds 我不是很熟练用这个于是先看例子搭了一个框架再ds启动
 	for i,num in enumerate(nums):
 		need=target-num
 		if need in seen:
@@ -68,7 +69,7 @@ if __name__ == "__main__":
 	result=RC(nums,target)
 	print(result)
 #T6
-def is_palindrome(s):                                                                                                                           
+def is_palindrome(s):                                                                                                                    #这里是ds外援，意思应该是先判断再回文       
 	if x<0:
 		return False
 	s=str(x)
