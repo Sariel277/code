@@ -32,18 +32,16 @@ class Video:
 		self.author = author
 		self.views = views
 		self.likes = likes
-def show_info(self):
-    print(f"视频标题: {self.title}")
-    print(f"up主: {self.author}")
-
-    print(f"播放量: {self.views}")
-
-    print(f"点赞数: {self.likes}")
-def like(self):
-    self.likes += 1
-    print(f"点赞成功！")
-    print(f"当前点赞数: {self.likes}")
-    #读取信息数据
+	def show_info(self):
+		print(f"视频标题: {self.title}")
+		print(f"up主: {self.author}")
+		print(f"播放量: {self.views}")
+		print(f"点赞数: {self.likes}")
+	def like(self):
+		self.likes += 1
+		print(f"点赞成功！")
+		print(f"当前点赞数: {self.likes}")
+#读取信息数据
 title=input().strip()
 author=input().strip()
 views=int(input().strip()) 
@@ -55,21 +53,17 @@ video.like()
 #T5
 def RC(nums,target):
 	seen = {}
-	#依然ds 我不是很熟练用这个于是先看例子搭了一个框架再ds启动
 	for i,num in enumerate(nums):
 		need=target-num
 		if need in seen:
 			return [seen[need],i]
 		seen[num]=i
 	return []
-if __name__ == "__main__":
-	data=input().split()
-	nums=list(map(int,data[:-1]))
-	target=int(input())
-	result=RC(nums,target)
-	print(result)
+nums=list(map(int,input("系统记录：").split()))
+target=int(input("目标热度："))
+print(RC(nums,target))
 #T6
-def is_palindrome(s):                                                                                                                    #这里是ds外援，意思应该是先判断再回文       
+def is_palindrome(s):
 	if x<0:
 		return False
 	s=str(x)
